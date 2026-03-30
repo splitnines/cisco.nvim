@@ -17,6 +17,10 @@ function M.detect(_, bufnr)
     if line:match("^! Last configuration change at") then
       return "cisco"
     end
+
+    if line:match("-- show version --") then
+      return "cisco"
+    end
   end
 
   return nil
