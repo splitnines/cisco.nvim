@@ -6,7 +6,7 @@ end
 
 function M.detect(_, bufnr)
   local line_count = vim.api.nvim_buf_line_count(bufnr)
-  local max_lines = math.min(line_count, 10)
+  local max_lines = math.min(line_count, 25)
   local lines = get_lines(bufnr, 1, max_lines)
 
   for _, line in ipairs(lines) do
